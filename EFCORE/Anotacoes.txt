@@ -1,0 +1,6 @@
+MIGRATIONS COMANDOS
+
+criando a migration
+dotnet ef migrations add 'nome_migration'  -p 'caminho_Nome_projeto'
+
+dotnet ef migrations add 'primeira_Migracao'  -p './EFCORE.Exemplos.csproj'
