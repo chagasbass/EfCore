@@ -9,8 +9,8 @@ namespace EFCORE.Exemplos.Contratos
         void InserirMultiplosClientes(IEnumerable<Cliente> clientes);
         void AtualizarCliente(Cliente cliente);
         void ExcluirClientes(Cliente cliente);
-        void ListarClientes();
-        void ListarClientes(int id);
+        IEnumerable<Cliente> ListarClientes();
+        Cliente ListarClientes(int id);
 
     }
 }

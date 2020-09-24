@@ -52,3 +52,7 @@ C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\obj\Debug\netcoreapp3.1\EFCORE.Exemplos.csp
 C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\obj\Debug\netcoreapp3.1\EFCORE.Exemplos.dll
 C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\obj\Debug\netcoreapp3.1\EFCORE.Exemplos.pdb
 C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\obj\Debug\netcoreapp3.1\EFCORE.Exemplos.genruntimeconfig.cache
+C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Dev\EfCore\EFCORE\EFCORE.Exemplos\obj\Debug\netcoreapp3.1\EFCORE.Exemplos.csproj.CoreCompileInputs.cache

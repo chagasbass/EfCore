@@ -1,7 +1,9 @@
 ﻿using EFCORE.Exemplos.Contextos;
 using EFCORE.Exemplos.Contratos;
 using EFCORE.Exemplos.Entidades;
-using System;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EFCORE.Exemplos.Repositorios
 {
@@ -18,7 +20,6 @@ namespace EFCORE.Exemplos.Repositorios
         {
             Contexto.Update(cliente);
             Contexto.SaveChanges();
-
         }
 
         public void ExcluirClientes(Cliente cliente)
@@ -33,14 +34,20 @@ namespace EFCORE.Exemplos.Repositorios
             Contexto.SaveChanges();
         }
 
-        public void ListarClientes()
+        public void InserirMultiplosClientes(IEnumerable<Cliente> clientes)
         {
-            throw new NotImplementedException();
+            Contexto.AddRange(clientes);
+            Contexto.SaveChanges();
         }
 
-        public void ListarClientes(int id)
+        public IEnumerable<Cliente> ListarClientes()
         {
-            throw new NotImplementedException();
+            return Contexto.Clientes.AsNoTracking().ToList();
+        }
+
+        public Cliente ListarClientes(int id)
+        {
+            return Contexto.Clientes.AsNoTracking().FirstOrDefault(x => x.Id == id);
         }
     }
 }

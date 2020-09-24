@@ -14,16 +14,16 @@ namespace EFCORE.Exemplos.Contextos
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<PedidoItem> PedidoItems { get; set; }
 
-        public ContextoEfCore(DbContextOptions<ContextoEfCore> options)
-          : base(options)
-        { }
+        //public ContextoEfCore(DbContextOptions<ContextoEfCore> options)
+        //  : base(options)
+        //{ }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
                 .UseLoggerFactory(_logger)
                 .EnableSensitiveDataLogging()
-                .UseSqlServer("Server=den1.mssql4.gear.host;Database=thiagoteste;User Id=thiagoteste;Password=Tn3sc8k_MVx~;");
+                .UseSqlServer("Server=den1.mssql4.gear.host;Database=thiagoteste;User ID=thiagoteste;Password=Tn3sc8k_MVx~;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,7 +34,6 @@ namespace EFCORE.Exemplos.Contextos
             modelBuilder.ApplyConfiguration(new PedidoMap());
             modelBuilder.ApplyConfiguration(new PedidoItemMap());
             #endregion
-
 
             #region Procurando no assembly todas as classes
             //modelBuilder.ApplyConfigurationsFromAssembly(typeof(ContextoEfCore).Assembly);
