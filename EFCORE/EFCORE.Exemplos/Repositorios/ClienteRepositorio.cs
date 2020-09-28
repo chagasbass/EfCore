@@ -18,8 +18,23 @@ namespace EFCORE.Exemplos.Repositorios
 
         public void AtualizarCliente(Cliente cliente)
         {
+            #region atualiza todas as propriedades
             Contexto.Update(cliente);
             Contexto.SaveChanges();
+            #endregion
+
+            #region Atualizando e retornando os campos atualizados
+
+            var _cliente = new
+            {
+                Nome ="Teste",
+                Telefone= "33445566"
+            };
+
+            Contexto.Entry(cliente).CurrentValues.SetValues(_cliente);
+            Contexto.SaveChanges();
+            #endregion
+            //Caso so tenha o saveChanges(), atualiza somente as propriedades que foram atualizadas
         }
 
         public void ExcluirClientes(Cliente cliente)

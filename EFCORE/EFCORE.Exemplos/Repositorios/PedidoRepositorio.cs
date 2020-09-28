@@ -6,8 +6,7 @@ using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
+
 
 namespace EFCORE.Exemplos.Repositorios
 {
@@ -28,7 +27,6 @@ namespace EFCORE.Exemplos.Repositorios
 
         public Pedido ListarPedidoComItensFiltrados(int pedidoId, int itemPedidoId)
         {
-
             #region Carregamento Adiantado
             //var pedido = Contexto.Pedidos.
             //    Include(x => x.Itens)
